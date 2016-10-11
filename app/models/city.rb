@@ -1,5 +1,5 @@
 class City < ActiveRecord::Base
-  before_create :geocode
+  before_validation :geocode
   
   private 
   def geocode

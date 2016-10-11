@@ -41,10 +41,12 @@ gem 'nominatim', '~> 0.0.6'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development do
+group :development, :test  do
 gem 'sqlite3'
+gem 'vcr', '~> 3.0', '>= 3.0.3'
 end
 
 group :production do
 gem 'pg'
 end
+

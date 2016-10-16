@@ -19,7 +19,7 @@ class MeteosControllerTest < ActionController::TestCase
   test "should create meteo" do
     VCR.use_cassette("forecast_io") do
       assert_difference(meteo.count) do
-        post:create, meteo :{name: @city.name, temperature: @meteo.temperature}
+        post:create, meteo: {temperature: @meteo.temperature}
       end
     end
     assert_difference('Meteo.count') do
@@ -41,7 +41,7 @@ class MeteosControllerTest < ActionController::TestCase
 
   test "should update meteo" do
     VCR.use_cassette("forecast_io") do
-      patch:update, id :@meteo, meteo: {name: @city.name,temperature:@meteo.temperature}
+      patch:update, id: @meteo, meteo: {temperature:@meteo.temperature}
  
       assert_redirected_to meteo_path(assigns(:meteo))
     end

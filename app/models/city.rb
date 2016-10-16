@@ -4,7 +4,14 @@ class City < ActiveRecord::Base
   
   before_validation :geocode
   
-  private 
+  public
+  def forecast_io
+    meteo = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' })
+    results = {}
+	  results[:temperature] = meteo.currently.temperature
+	  results
+  end  
+  
   def geocode
     places = Nominatim.search.city(self.name).limit(1)
     if places.first

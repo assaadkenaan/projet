@@ -1,0 +1,27 @@
+<h1>Listing meteos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City</th>
+      <th>Temperature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meteos.each do |meteo| %>
+      <tr>
+        <td><%= meteo.city %></td>
+        <td><%= meteo.temperature %></td>
+        <td><%= link_to 'Show', meteo %></td>
+        <td><%= link_to 'Edit', edit_meteo_path(meteo) %></td>
+        <td><%= link_to 'Destroy', meteo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meteo', new_meteo_path %>

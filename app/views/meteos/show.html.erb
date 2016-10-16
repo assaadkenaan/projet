@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>City:</strong>
+  <%= @meteo.city %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @meteo.temperature %>
+</p>
+
+<%= link_to 'Edit', edit_meteo_path(@meteo) %> |
+<%= link_to 'Back', meteos_path %>

@@ -42,7 +42,8 @@ class MeteosControllerTest < ActionController::TestCase
   test "should update meteo" do
     VCR.use_cassette("forecast_io") do
       patch:update, id :@meteo, meteo: {name: @city.name,temperature:@meteo.temperature}
-    assert_redirected_to meteo_path(assigns(:meteo))
+ 
+      assert_redirected_to meteo_path(assigns(:meteo))
     end
   end
 

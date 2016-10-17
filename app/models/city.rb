@@ -5,7 +5,7 @@ class City < ActiveRecord::Base
  
   def forecast_io
    
-    forecast = ForecastIO.forecast(self.lat, self.lon, params: { units: 'si' }) 
+    forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' }) 
     results = {} 
        results[:temperature] = forecast.currently.temperature 
     results[:summary] = forecast.currently.summary
@@ -18,7 +18,7 @@ class City < ActiveRecord::Base
   def geocode
     places = Nominatim.search.city(self.name).limit(1)
     self.lat=places.first.lat
-    self.lon=places.first.lon
+    self.long=places.first.lon
   end
 
 end

@@ -17,7 +17,7 @@ class CitiesControllerTest < ActionController::TestCase
   test "should create city" do
       VCR.use_cassette("nominatim") do
     assert_difference('City.count') do
-      post :create, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+      post :create, city: { lat: @city.lat, long: @city.long, name: @city.name }
         end
     
     assert_redirected_to city_path(assigns(:city))
@@ -35,7 +35,7 @@ class CitiesControllerTest < ActionController::TestCase
   end
   test "should update city" do
       VCR.use_cassette("nominatim") do
-    patch :update, id: @city, city: { lat: @city.lat, lon: @city.lon, name: @city.name }
+    patch :update, id: @city, city: { lat: @city.lat, long: @city.long, name: @city.name }
     assert_redirected_to city_path(assigns(:city))
       end
   end

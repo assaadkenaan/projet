@@ -3,18 +3,23 @@ class CitiesController < ApplicationController
 
   # GET /cities
   # GET /cities.json
-  def index
+   # GET /cities
+
+  # GET /cities.json
+   def index
     @cities = City.all
-      @cities.each do | city |
-	            city.forecast_io
+   	@cities.each do | city |
+		city.forecast_io
   	end
-  end
+   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
-    @forecasts = @city.forecast_io
+    @forecastes = @city.forecast_io
   end
+
+
 
   # GET /cities/new
   def new
@@ -73,6 +78,6 @@ class CitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def city_params
-      params.require(:city).permit(:name, :lat, :long)
+      params.require(:city).permit(:name, :lat, :lon)
     end
 end

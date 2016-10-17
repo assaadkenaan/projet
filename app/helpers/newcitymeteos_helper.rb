@@ -1,0 +1,2 @@
+module NewcitymeteosHelper
+end

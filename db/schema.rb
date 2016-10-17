@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161016143054) do
+ActiveRecord::Schema.define(version: 20161017101543) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -24,6 +24,25 @@ ActiveRecord::Schema.define(version: 20161016143054) do
   create_table "meteos", force: true do |t|
     t.string   "city"
     t.integer  "temperature"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "newcitymeteos", force: true do |t|
+    t.string   "name"
+    t.float    "lat"
+    t.float    "lon"
+    t.float    "temperature"
+    t.string   "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "news", force: true do |t|
+    t.string   "meteo"
+    t.float    "lon"
+    t.float    "lat"
+    t.string   "temperature"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

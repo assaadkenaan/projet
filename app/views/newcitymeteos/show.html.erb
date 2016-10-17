@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @newcitymeteo.name %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @newcitymeteo.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @newcitymeteo.lon %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @newcitymeteo.temperature %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @newcitymeteo.summary %>
+</p>
+
+<%= link_to 'Edit', edit_newcitymeteo_path(@newcitymeteo) %> |
+<%= link_to 'Back', newcitymeteos_path %>

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :newcitymeteos
+
+  resources :news
+
   resources :meteos
 
   resources :cities

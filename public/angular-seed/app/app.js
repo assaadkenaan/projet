@@ -1,14 +1,16 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+describe('myApp.view1 module', function() {
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+  beforeEach(module('myApp.view1'));
+
+  describe('view1 controller', function(){
+
+    it('should ....', inject(function($controller) {
+      //spec body
+      var view1Ctrl = $controller('View1Ctrl');
+      expect(view1Ctrl).toBeDefined();
+    }));
+
+  });
+});

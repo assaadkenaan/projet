@@ -6,6 +6,13 @@ class City < ActiveRecord::Base
 
    public
  
+  def weather;
+    if self.lat
+      ForecastIO.forecast(self.lat,self.long).currently.icon
+      else
+       'unknown'
+    end
+ end
   def forecast_io
    
     forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' }) 
@@ -24,5 +31,5 @@ class City < ActiveRecord::Base
     self.lat=places.first.lat
     self.long=places.first.lon
   end
-  end
+ end
 end

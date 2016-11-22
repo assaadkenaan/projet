@@ -2,7 +2,10 @@
 <html>
 <head>
   <title>Workspace</title>
+  
+   
   <h1>
+    <br>
     <center>
       This is my first application
      
@@ -17,10 +20,37 @@
 </head>
 <body>
   
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">LPA2</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+       <ul class="nav navbar-nav">
+          <%= nav_link('students', students_path ) %>
+          <%= nav_link('cities', cities_path ) %>
+        </ul>
+          
+        
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  
 <style>
 body {
   
-    background-color: #8B4513;
+    background-color: #39CCCC;
  
 }
   h1 {

@@ -6,7 +6,8 @@ gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'sass-rails', '>= 3.2'
+gem 'bootstrap-sass', '~> 3.3.6'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -28,6 +29,8 @@ gem 'spring',        group: :development
 
 gem 'nominatim', '~> 0.0.6'
 gem 'forecast_io', '~> 2.0', '>= 2.0.1'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 #gem 'angularjs-rails', '~> 1.5', '>= 1.5.6'

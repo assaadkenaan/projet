@@ -11,7 +11,7 @@ class CitiesController < ApplicationController
    	@cities.each do | city |
 		city.forecast_io
   	end
-   end
+  end
 
   # GET /cities/1
   # GET /cities/1.json

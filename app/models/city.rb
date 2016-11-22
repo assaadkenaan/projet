@@ -12,7 +12,7 @@ class City < ActiveRecord::Base
       else
        'unknown'
     end
- end
+  end
   def forecast_io
    
     forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' }) 
@@ -30,6 +30,6 @@ class City < ActiveRecord::Base
     if places.first
     self.lat=places.first.lat
     self.long=places.first.lon
+    end
   end
- end
 end

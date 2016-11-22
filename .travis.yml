@@ -5,16 +5,16 @@ rvm:
 
 deploy:
   provider: heroku
- 
+  
   api_key:
     secure: ei5JbMSRX1JpM83VtN3Gy0YfEZBX80ki1RC0ndWM0lgs9jTS+J55PvdQRidvmDeAVZeKAIyuBvx0Ri41YqqD8odwwl/PUFU36UmxsrSz7ANECs5Vnnj+uwjUKh8zFMtRP64RaO8j7sLoXt9Zdu8TRUlgS/RxvJ9y9O/x67Ld2fy0Aa6N8AaHZuo1SmzHobBF6QRtMu+WOgu16UVgGtcIU0+S14ubtMiHdgGW1mOgYPrDSAOxWqZ7waahlRSK3U31rKF2/OMLUG6VvpUFDotRnMFmHMU5JjZGsRXG6f9adpPH3IBYjIkL0sxL5yfVJ7ZOqzEtE8EmkXyXQW1RDyV/+wSP+zcPg8ghW4rIy2o4HFj4OFLNzjxQEXUQVAExs1zF5VpAv99qb5b9pnFNkWyK9VAkjPYrV7hCMShmyPtftS5QymBRcJKCQJUZAq3Yjwm0QBPdPzpjLQdDbb9zGqJ6r45jU+eH0os5qdq1o0v68bnPQJED37DViIX8imijgQmbnnF+Dw9z4wfIarlIU+RV7sxfUgJIUAVSBfrjhIB02sbjrLTQgWW6Wr2tWQz6xrCqUmk1N+4go95rw6OgergfWoOnoZ7YzXwD0Et1WsHMl++LnHVJvRbQZVjOWC7w/jDokYujqUYvSpD99Lp5NylLxa1jsDhUTcVJu/AtKUKQIQ8=
   app: agile-island-78481
   on:
     repo: assaadkenaan/projet
-    
-addons:
+  addons:
   code_climate:
-    repo_token: <token>
+        repo_token: 3c3e878d08f77d9dd749b8be66246471c4f8916f42ab7926d5d1344d93375a2b
+
 # regular test configuration
-after_success:
+ after_success:
   - bundle exec codeclimate-test-reporter

@@ -1,11 +1,11 @@
-<h1>New cities</h1>
+<h1>Listing cities</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Lat</th>
-      <th>Long</th>
+      <th>Lon</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,43 +15,25 @@
       <tr>
         <td><%= city.name %></td>
         <td><%= city.lat %></td>
-        <td><%= city.long %></td>
-        <td><%= link_to 'Show', city %></td>
-        <td><%= link_to 'Edit', edit_city_path(city) %></td>
-        <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= city.lon %></td>
+        <td><%= button_to city,method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-info-sign"></i> Show
+            <% end %>        
+        </td>
+        <td><%= button_to edit_city_path(city), method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-pencil"></i> Edit
+            <% end %>
+        </td>
+        <td><%= button_to city, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-lg" do %>
+              <i class="glyphicon glyphicon-remove"></i> Destroy
+            <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New City', new_city_path %>
-<style>
-
-  h1 {
-    color:white;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 350%;
-    color:#ff6600;
-  }
-  body{
-    color:white;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 200%;
-  }
-table, td, th {
-    border: 1px solid black;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-   
-}
-
-th {
-    height: 50px;
-}
- 
-</style>
+<%= button_to new_city_path, method: :get, class: 'btn btn-default btn-lg' do %>
+  <i class="glyphicon glyphicon-home"></i> New City
+<% end %>

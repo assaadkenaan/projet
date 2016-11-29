@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
-   
-  <h1>
-    <br>
-    <center>
-      This is my first application
-        </center>
- 
-   
-   <br>
-   
-  </h1>
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+          <span class="sr-only">Toggle navigation</span>
+
+          <span class="icon-bar"></span>
+
+          <span class="icon-bar"></span>
+
+        </button>
+
+        <a class="navbar-brand" href="#">LPA2</a>
+
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav">
+
+          <%= nav_link('Students', students_path) %>
+          <%= nav_link('Cities', cities_path) %>
+
+        </ul>
+
+      </div><!--/.nav-collapse -->
+
+    </div>
+
+  </nav>
+  
+  <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
-  
 
-   <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">LPA2</a>
-      </div>
-      <div id="navbar" class="collapse navbar-collapse">
-       <ul class="nav navbar-nav">
-          <%= nav_link('students', students_path ) %>
-          <%= nav_link('cities', cities_path ) %>
-        </ul>
-          
-        
-      </div><!--/.nav-collapse -->
-    </div>
-  </nav>
-            
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-<style>
-  
-body {
-  
-    background-color: #39CCCC;
-    background-image: url("/assets/myImage/parisp1.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-size:cover;
-  
-  img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-
-  
-  }
-   
-  
-</style>
-  
-
-<%= yield %>
+  <div id="main">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

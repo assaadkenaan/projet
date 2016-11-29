@@ -3,24 +3,33 @@
 <p>
   <strong>Name:</strong>
   <%= @city.name %>
-</p>
-
-<p>
   <strong>Lat:</strong>
   <%= @city.lat %>
+    <strong>Lon:</strong>
+  <%= @city.lon %>
 </p>
 
-<p>
-  <strong>Long:</strong>
-  <%= @city.long %>
+<strong>Weather:</strong>
+  <%= @weather[:summary] %>
 </p>
-<p>
-  <strong>Temperature:</strong>
-  <%= @forecastes[:temperature] %>
+
+<strong>Temperature :</strong>
+  <%=  @weather[:current_temp] %>
+<strong> °C </strong>
 </p>
-<p>
-  <strong>Summary:</strong>
-  <%= @forecastes[:summary]%>
+
+<strong> WindSpeed: </strong>
+  <%=  @weather[:current_wind] %>
+<strong> km/h </strong>
 </p>
-<%= link_to 'Edit', edit_city_path(@city) %> |
-<%= link_to 'Back', cities_path %>
+
+<strong> ICON :</strong>
+  <%=  @weather[:icon] %>
+</p>
+
+<%= button_to edit_city_path(@city),method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-pencil"></i> Edit
+<% end %>
+<%= button_to cities_path, method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-triangle-left"></i> Back
+<% end %>

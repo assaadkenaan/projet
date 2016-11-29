@@ -2,5 +2,9 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @city %> |
-<%= link_to 'Back', cities_path %>
+<%= button_to @city,method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-info-sign"></i> Show
+<% end %>
+<%= button_to cities_path, method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-triangle-left"></i> Back
+<% end %>

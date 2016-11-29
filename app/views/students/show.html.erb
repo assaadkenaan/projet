@@ -20,5 +20,9 @@
   <%= @student.major? %>
 </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<%= button_to edit_student_path(@student),method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-pencil"></i> Edit
+<% end %>
+<%= button_to students_path, method: :get, class: 'btn btn-default btn-lg' do %>
+              <i class="glyphicon glyphicon-triangle-left"></i> Back
+<% end %>

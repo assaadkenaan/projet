@@ -63,4 +63,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  
+  get '/auth/github/callback', to: 'session#create'
 end

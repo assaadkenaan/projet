@@ -13,15 +13,20 @@ class City < ActiveRecord::Base
        'unknown'
     end
   end
-  def forecast_io
-   
-    forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' }) 
-    results = {} 
-       results[:temperature] = forecast.currently.temperature 
-    results[:summary] = forecast.currently.summary
 
+   def forecast_io
+      if self.lat
+
+       forecast = ForecastIO.forecast(self.lat, self.long, params: { units: 'si' }) 
+       results = {} 
+       results[:temperature] = forecast.currently.temperature 
+       results[:summary] = forecast.currently.summary 
+      
       results 
-  end
+     else
+        'unknown'
+      end
+   end 
   
   private
 

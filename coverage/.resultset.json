@@ -287,8 +287,8 @@
         2,
         null,
         2,
-        2,
-        2,
+        0,
+        0,
         0,
         null,
         0,
@@ -403,7 +403,7 @@
         1,
         null
       ],
-      "/home/cabox/workspace/app/controllers/newcitymeteos_controller.rb": [
+      "/home/cabox/workspace/app/controllers/students_controller.rb": [
         1,
         1,
         null,
@@ -479,7 +479,7 @@
         null,
         null
       ],
-      "/home/cabox/workspace/app/controllers/students_controller.rb": [
+      "/home/cabox/workspace/app/controllers/newcitymeteos_controller.rb": [
         1,
         1,
         null,
@@ -556,6 +556,6 @@
         null
       ]
     },
-    "timestamp": 1481139407
+    "timestamp": 1481140530
   }
 }

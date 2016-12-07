@@ -1,3 +1,3 @@
 ForecastIO.configure do |configuration|
-  configuration.api_key = 'd44d3a41735425fdc54f881f45aa30f5'
+  configuration.api_key = ENV['FORECAST_IO_KEY']
 end

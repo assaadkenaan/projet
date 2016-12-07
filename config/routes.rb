@@ -65,5 +65,5 @@ Rails.application.routes.draw do
   #   end
   
     
-get '/auth/github/callback', to: 'session#create'
+  get '/auth/github/callback', to: 'session#create'
 end

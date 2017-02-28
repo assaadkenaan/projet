@@ -4,3 +4,5 @@
 # projet
 
 Premier sujet : faire fonctionner le CI
+
+Lien vers l'application : https://agile-island-78481.herokuapp.com/students

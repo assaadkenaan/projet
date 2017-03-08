@@ -6,7 +6,6 @@
 Premier sujet : faire fonctionner le CI
 
 ## Ruby on Rails
-
 https://agile-island-78481.herokuapp.com/students
 
 ## Test avec Oauth

@@ -5,4 +5,13 @@
 
 Premier sujet : faire fonctionner le CI
 
-Lien vers l'application : https://agile-island-78481.herokuapp.com/students
+## Ruby on Rails
+
+https://agile-island-78481.herokuapp.com/students
+
+## Test avec Oauth
+https://agile-island-78481.herokuapp.com/auth/github
+
+## Angular
+https://agile-island-78481.herokuapp.com/angular-seed/app/index#!/view1
+
